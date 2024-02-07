@@ -89,6 +89,10 @@ header {
    padding-top: 104px;
 }
 
+.py-4 , .py-2{
+   transition: all 0.3s ease;
+}
+
 #portfolio .img_parent {
    position: relative;
    border-radius: 0.5rem;

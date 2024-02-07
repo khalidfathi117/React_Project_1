@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 export default function Navigation() {
+
+   const [nav, setNav] = useState('py-4')
+   useEffect(() => {
+      function navScroll(){
+         if(window.scrollY >= 103){
+            setNav('py-2');
+         }else{
+            setNav('py-4');
+         }
+      }
+      window.addEventListener('scroll', navScroll);
+      return () => window.removeEventListener('scroll', navScroll);
+   }, []);
+
    return (
       <>
-         <nav className="navbar navbar-expand-lg py-4 fixed-top">
+         <nav className={`navbar navbar-expand-lg ${nav} fixed-top`}>
             <div className="container">
                <Link className="navbar-brand fs-2" to={'/'}>START FRAMEWORK</Link>
                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
