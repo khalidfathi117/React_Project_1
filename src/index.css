@@ -1,0 +1,140 @@
+:root {
+   --headFoot: rgb(44, 62, 80);
+   --primaryColor: #1abc9c;
+}
+
+.navbar {
+   background-color: var(--headFoot);
+}
+
+.navbar a {
+   color: white !important;
+   font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+   width: fit-content;
+}
+
+.navbar-nav .nav-link.active {
+   background-color: var(--primaryColor);
+   border-radius: 0.5rem;
+}
+
+footer {
+   background-color: var(--headFoot);
+}
+
+footer .icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 35px;
+   height: 35px;
+   border: 1px white solid;
+   border-radius: 50%;
+   margin: 10px 4px;
+}
+
+footer .copyright {
+   background-color: #1a252f;
+}
+
+header {
+   background-color: var(--primaryColor);
+}
+
+.star {
+   width: fit-content;
+   display: inline-block;
+}
+
+.star::before {
+   content: "";
+   position: absolute;
+   width: 5rem;
+   height: 4px;
+   bottom: 45%;
+   left: 2rem;
+   background-color: white;
+}
+
+.star::after {
+   content: "";
+   position: absolute;
+   width: 5rem;
+   height: 4px;
+   bottom: 45%;
+   right: 2rem;
+   background-color: white;
+}
+
+#about {
+   background-color: var(--primaryColor);
+   color: white;
+}
+
+#portfolio {
+   color: var(--headFoot);
+}
+
+#portfolio .star::after,
+#portfolio .star::before,
+#contact .star::after,
+#contact .star::before {
+   background-color: var(--headFoot) !important;
+}
+
+.Offset {
+   padding-top: 104px;
+}
+
+#portfolio .img_parent {
+   position: relative;
+   border-radius: 0.5rem;
+   border: 1px solid white;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+#portfolio .img_overlay {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   opacity: 0;
+   color: white;
+   background-color: #1abc9cd2;
+   transition: 0.4s all;
+}
+
+#portfolio .img_parent:hover .img_overlay {
+   opacity: 1;
+}
+
+.port_overlay {
+   background-color: #0D6EFD40;
+   z-index: 2000;
+   top: 0;
+   position: fixed;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+}
+
+#contact{
+   color: var(--headFoot);
+}
+
+input:focus{
+   outline: none !important;
+   box-shadow: none !important;
+}
+
+.btn{
+   background-color: var(--primaryColor) !important;
+}
